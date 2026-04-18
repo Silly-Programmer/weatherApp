@@ -25,7 +25,7 @@ class _MainCardState extends State<MainCard> {
                        SizedBox(height: 16,),
                       Icon(Icons.cloud, size: 48,),
                        SizedBox(height: 16,),
-                      Text("Rain", style:TextStyle(fontFamily: 'BricolageGrotesque', fontSize: 32))
+                      Text("Rain", style:TextStyle(fontFamily: 'BricolageGrotesque', fontSize: 32, color: Colors.blue))
                     ],
                   ),
                 ),
