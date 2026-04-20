@@ -30,10 +30,13 @@ class HourlyForecast extends StatelessWidget {
                 fontFamily: 'BricolageGrotesque',
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
+                
               ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
             const SizedBox(height: 10),
-            Iconify(Emojione.sun),
+            Iconify(icon),
             const SizedBox(height: 10),
             Text(
               temperature,

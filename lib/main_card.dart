@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:colorful_iconify_flutter/icons/emojione.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
 
 
-class MainCard extends StatefulWidget {
-  const MainCard({super.key});
+class MainCard extends StatelessWidget {
+  final String temp;
+  final String icon;
+  final String status;
+  const MainCard({
+    super.key,
+    required this.temp,
+    required this.icon,
+    required this.status
+});
 
-  @override
-  State<MainCard> createState() => _MainCardState();
-}
-
-class _MainCardState extends State<MainCard> {
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
               width: double.infinity,
               child: Card(
                 elevation: 10,
@@ -21,11 +26,11 @@ class _MainCardState extends State<MainCard> {
                   padding: EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Text("300K", style:TextStyle(fontSize: 32, fontFamily: 'BricolageGrotesque', fontWeight: FontWeight.bold)),
+                      Text(temp , style:TextStyle(fontSize: 32, fontFamily: 'BricolageGrotesque', fontWeight: FontWeight.bold)),
                        SizedBox(height: 16,),
-                      Icon(Icons.cloud, size: 48,),
+                      Iconify(icon, size:48),
                        SizedBox(height: 16,),
-                      Text("Rain", style:TextStyle(fontFamily: 'BricolageGrotesque', fontSize: 32, color: Colors.blue))
+                      Text(status, style:TextStyle(fontFamily: 'BricolageGrotesque', fontSize: 32, color: Colors.blue))
                     ],
                   ),
                 ),
